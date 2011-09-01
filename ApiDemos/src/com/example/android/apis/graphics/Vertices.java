@@ -23,6 +23,7 @@ import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.*;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.*;
 
 import java.io.IOException;
@@ -51,37 +52,13 @@ public class Vertices extends GraphicsActivity {
             array[index*2 + 1] = y;
         }
 
-        private void drawImageWithGrid(Bitmap mBitmap,Bitmap back){
-        	int WIDTH=20;
-        	int HEIGHT=20;
-        	Canvas canvas=new Canvas(mBitmap);
-        	float w = mBitmap.getWidth();
-            float h = mBitmap.getHeight();
-            int xCount=(int)w/WIDTH;
-            int yCount=(int)h/HEIGHT;
-            Paint paint=new Paint();
-            canvas.drawBitmap(back, 0, 0, paint);
-            paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(1);
-            paint.setColor(0x8000FF00);
-            for(int i=0;i<xCount;i++){
-            	for(int j=0;j<yCount;j++){
-            		canvas.drawRect(i*WIDTH, j*HEIGHT, 
-            				i*WIDTH+WIDTH, j*HEIGHT+HEIGHT, paint);
-            	}
-            }
-        }
-        
         public SampleView(Context context) {
             super(context);
             setFocusable(true);
 
             Bitmap bm = BitmapFactory.decodeResource(getResources(),
                                                      R.drawable.beach);
-            Bitmap mBitmap=Bitmap.createBitmap(bm.getWidth(),
-            		bm.getHeight(), Bitmap.Config.ARGB_8888);
-            drawImageWithGrid(mBitmap,bm);
-            Shader s = new BitmapShader(mBitmap, Shader.TileMode.CLAMP,
+            Shader s = new BitmapShader(bm, Shader.TileMode.CLAMP,
                                         Shader.TileMode.CLAMP);
             mPaint.setShader(s);
             

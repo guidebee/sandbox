@@ -144,7 +144,7 @@ public class InternalSelectionView extends View {
         int rectRight = getWidth() - getPaddingRight();
         for (int i = 0; i < mNumRows; i++) {
 
-            mPainter.setColor(Color.GREEN);
+            mPainter.setColor(Color.BLACK);
             mPainter.setAlpha(0x20);
 
             // draw background rect
@@ -157,7 +157,7 @@ public class InternalSelectionView extends View {
                 mPainter.setAlpha(0xF0);
                 mTextPaint.setAlpha(0xFF);
             } else {
-                mPainter.setColor(Color.GREEN);
+                mPainter.setColor(Color.BLACK);
                 mPainter.setAlpha(0x40);
                 mTextPaint.setAlpha(0xF0);
             }

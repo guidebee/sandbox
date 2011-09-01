@@ -31,7 +31,6 @@
         android:background="@drawable/box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/linear_layout_3_top"/>
 
     <!-- view2 goes in the middle -->
@@ -47,7 +46,6 @@
         android:background="@drawable/box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/linear_layout_3_bottom"/>
 
 </LinearLayout>

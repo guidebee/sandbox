@@ -64,8 +64,7 @@ public class LauncherShortcuts extends Activity {
 
         // If the intent is a request to create a shortcut, we'll do that and exit
 
-        if (Intent.ACTION_CREATE_SHORTCUT.equals(action)) 
-        {
+        if (Intent.ACTION_CREATE_SHORTCUT.equals(action)) {
             setupShortcut();
             finish();
             return;

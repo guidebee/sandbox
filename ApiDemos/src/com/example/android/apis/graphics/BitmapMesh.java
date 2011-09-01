@@ -49,38 +49,15 @@ public class BitmapMesh extends GraphicsActivity {
             array[index*2 + 1] = y;
         }
 
-        
-        private void drawImageWithGrid(Bitmap image){
-        	Canvas canvas=new Canvas(mBitmap);
-        	float w = mBitmap.getWidth();
-            float h = mBitmap.getHeight();
-            int xCount=(int)w/WIDTH;
-            int yCount=(int)h/HEIGHT;
-            Paint paint=new Paint();
-            canvas.drawBitmap(image, 0, 0, paint);
-            paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(1);
-            paint.setColor(0x8000FF00);
-            for(int i=0;i<xCount;i++){
-            	for(int j=0;j<yCount;j++){
-            		canvas.drawRect(i*WIDTH, j*HEIGHT, 
-            				i*WIDTH+WIDTH, j*HEIGHT+HEIGHT, paint);
-            	}
-            }
-        }
         public SampleView(Context context) {
             super(context);
             setFocusable(true);
 
-            Bitmap mBitmap1 = BitmapFactory.decodeResource(getResources(),
+            mBitmap = BitmapFactory.decodeResource(getResources(),
                                                      R.drawable.beach);
             
-            mBitmap=Bitmap.createBitmap(mBitmap1.getWidth(),
-            		mBitmap1.getHeight(), Bitmap.Config.ARGB_8888);
-            drawImageWithGrid(mBitmap1);
             float w = mBitmap.getWidth();
             float h = mBitmap.getHeight();
-            
             // construct our mesh
             int index = 0;
             for (int y = 0; y <= HEIGHT; y++) {

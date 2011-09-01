@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+//this is first line
 package com.example.android.apis;
 
 import android.app.ListActivity;
@@ -82,7 +82,8 @@ public class ApiDemos extends ListActivity {
             String label = labelSeq != null
                     ? labelSeq.toString()
                     : info.activityInfo.name;
-              if (prefix.length() == 0 || label.startsWith(prefix)) {
+            
+            if (prefix.length() == 0 || label.startsWith(prefix)) {
                 
                 String[] labelPath = label.split("/");
 

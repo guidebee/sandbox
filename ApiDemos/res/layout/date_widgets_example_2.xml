@@ -16,13 +16,10 @@
 
 <!-- example of using the time changed callback, with now visible 'set' button-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical" android:layout_width="match_parent">
+    android:orientation="horizontal">
 
-    <DatePicker android:id="@+id/datePicker"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
-        
     <TimePicker android:id="@+id/timePicker"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
@@ -32,12 +29,5 @@
             android:layout_height="wrap_content"
             android:paddingLeft="4dip"
             android:text="@string/date_widgets_example_dateDisplay_text"/>
-            
-    <TextView android:id="@+id/timeDisplay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="4dip"
-            android:text="@string/date_widgets_example_dateDisplay_text"/>
-       
 
 </LinearLayout>

@@ -31,6 +31,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- For android.media.audiofx.Visualizer -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <!-- We will request access to the camera, saying we require a camera
          of some sort but not one with autofocus capability. -->
@@ -201,6 +205,14 @@
 
         <activity android:name=".app.SetWallpaperActivity"
                   android:label="@string/activity_setwallpaper">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".app.ScreenOrientation"
+                  android:label="@string/activity_screen_orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -635,6 +647,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".content.PickContact" android:label="@string/activity_pick_contact">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ************************************* -->
         <!--     OS PACKAGE SAMPLES                -->
         <!-- ************************************* -->
@@ -647,6 +666,13 @@
         </activity>
 
         <activity android:name=".os.Sensors" android:label="OS/Sensors">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".os.RotationVectorDemo" android:label="OS/Rotation Vector"  android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -1443,6 +1469,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.SecureView" android:label="Views/Secure View">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ************************************* -->
         <!--           GRAPHICS SAMPLES            -->
         <!-- ************************************* -->
@@ -1599,6 +1632,14 @@
 
         <activity android:name=".graphics.SurfaceViewOverlay"
                 android:label="Graphics/SurfaceView Overlay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".graphics.WindowSurface"
+                android:label="Graphics/Surface Window">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -1854,6 +1895,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".media.AudioFxDemo" android:label="Media/AudioFx">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ************************************* -->
         <!--      APPWIDGET PACKAGE SAMPLES           -->
         <!-- ************************************* -->
@@ -1898,6 +1946,36 @@
         </activity>
 
         <activity android:name=".text.LogTextBox1" android:label="Text/LogTextBox">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".nfc.ForegroundDispatch" android:label="NFC/ForegroundDispatch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".nfc.TechFilter" android:label="NFC/TechFilter">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <!-- Add a technology filter -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/filter_nfc"
+            />
+        </activity>
+
+        <activity android:name=".nfc.ForegroundNdefPush" android:label="NFC/ForegroundNdefPush">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />

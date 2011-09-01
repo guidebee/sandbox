@@ -85,7 +85,7 @@ public class AlphaBitmap extends GraphicsActivity {
             canvas.drawBitmap(mBitmap, 10, y, p);
             y += mBitmap.getHeight() + 10;
             canvas.drawBitmap(mBitmap2, 10, y, p);
-            y += mBitmap2.getHeight() +10;
+            y += mBitmap2.getHeight() + 10;
             p.setShader(mShader);
             canvas.drawBitmap(mBitmap3, 10, y, p);
         }

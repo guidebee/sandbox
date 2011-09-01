@@ -101,7 +101,7 @@ public class MediaPlayerDemo_Video extends Activity implements
                      * reasonably interleaved.
                      * 
                      */
-                    path = "http://www.imobilebbs.com/download/android/boy.3gp";
+                    path = "";
                     if (path == "") {
                         // Tell the user to provide a media file URL.
                         Toast

@@ -42,13 +42,5 @@
         android:singleLine="true"
         android:ellipsize="marquee"
         android:marqueeRepeatLimit="marquee_forever"/>  
-        
-    <com.example.android.apis.text.ScrollAlwaysTextView
-        android:layout_width="150dip" 
-        android:layout_height="wrap_content"
-        android:text="@string/marquee_forever"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"/> 
            
 </LinearLayout>

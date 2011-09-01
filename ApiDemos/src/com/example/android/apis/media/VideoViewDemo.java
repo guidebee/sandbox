@@ -29,7 +29,7 @@ public class VideoViewDemo extends Activity {
      * TODO: Set the path variable to a streaming video URL or a local media
      * file path.
      */
-    private String path = "http://www.imobilebbs.com/download/android/boy.3gp";
+    private String path = "";
     private VideoView mVideoView;
 
     @Override

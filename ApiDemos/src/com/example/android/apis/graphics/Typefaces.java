@@ -33,16 +33,12 @@ public class Typefaces extends GraphicsActivity {
     private static class SampleView extends View {
         private Paint    mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private Typeface mFace;
-        private Typeface mFace1;
         
         public SampleView(Context context) {
             super(context);
 
             mFace = Typeface.createFromAsset(getContext().getAssets(),
                                              "fonts/samplefont.ttf");
-            
-            mFace1 = Typeface.createFromAsset(getContext().getAssets(),
-            "fonts/edwardian.ttf");
             
             mPaint.setTextSize(64);
         }
@@ -54,8 +50,6 @@ public class Typefaces extends GraphicsActivity {
             canvas.drawText("Default", 10, 100, mPaint);
             mPaint.setTypeface(mFace);
             canvas.drawText("Custom", 10, 200, mPaint);
-            mPaint.setTypeface(mFace1);
-            canvas.drawText("Edwardian", 10, 300, mPaint);
         }
     }
 }

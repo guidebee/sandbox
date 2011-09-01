@@ -44,6 +44,12 @@
     <string name="set_wallpaper">Set Wallpaper</string>
     <string name="randomize">Randomize</string>
 
+    <string name="activity_screen_orientation">App/Activity/Screen Orientation</string>
+    <string name="screen_orientation_summary">Demonstrates the available screen
+        orientation modes.  Often you want to set the desired mode in your manifest
+        instead of programmatically.</string>
+    <string name="screen_orientation">Screen Orientation</string>
+    
     <string name="activity_translucent">App/Activity/Translucent</string>
     <string name="translucent_background">Example of how you can make an
             activity have a translucent background, compositing over
@@ -246,6 +252,15 @@
     <string name="activity_themes">Content/Resources/Themes</string>
     <string name="activity_resources">Content/Resources/Resources</string>
 
+    <string name="activity_pick_contact">Content/Provider/Pick Contact</string>
+    <string name="pick_contact_msg">Invoke Contacts to pick varius kinds of
+        contact data.  None of these require that the caller hold the
+        READ_CONTACTS permission.</string>
+    <string name="pick_contact">Pick a Contact</string>
+    <string name="pick_person">Pick a Person</string>
+    <string name="pick_phone">Pick a Phone</string>
+    <string name="pick_address">Pick an Address</string>
+    
     <!-- ============================== -->
     <!--  app/intents examples strings     -->
     <!-- ============================== -->
@@ -464,6 +479,7 @@
     <string name="max_failed_pw_hint">Password Attempts Wipe Data</string>
     <string name="force_lock">Force Lock</string>
     <string name="wipe_data">Wipe Data</string>
+    <string name="wipe_all_data">Wipe All Data</string>
     <string name="timeout_hint">Max screen timeout</string>
     <string name="set_timeout_label">Set Timeout</string>
 
@@ -482,6 +498,8 @@
     <string name="hide_me">Hide Me!</string>
 
     <string name="density_title">Density: Unknown Screen</string>
+    <string name="camera_alert">Device has only one camera!</string>
+    <string name="switch_cam">Switch Camera</string>
 
     <!-- ============================ -->
     <!--  media examples strings  -->
@@ -520,6 +538,49 @@
     <string name="seekbar_from_touch">from touch</string>
 
     <string name="ratingbar_rating">Rating:</string>
+
+    <string name="secure_view_description">
+        This activity demonstrates a view that detects when it is potentially obscured
+        by other windows.
+    </string>
+    <string name="secure_view_step1_heading">Click me first:</string>
+    <string name="secure_view_step1_detail">
+        Pop up a toast that will overlay and obscure this window in a poor attempt to fool
+        you into clicking the big red buttons.  Don\'t do it!
+    </string>
+    <string name="secure_view_step2_heading">Unfiltered demo:</string>
+    <string name="secure_view_step2_detail">
+        This button does no filtering.  This button will still work as usual while the
+        toast is visible and is spoofing the view.  Careful!
+    </string>
+    <string name="secure_view_step3_heading">Built-in filtering demo:</string>
+    <string name="secure_view_step3_detail">
+        This button uses the built-in secure touch filtering provided by the framework
+        using the android:filterTouchesWhenObscured attribute.  This button will be inoperable
+        while the toast is visible.
+    </string>
+    <string name="secure_view_step4_heading">Custom filtering demo:</string>
+    <string name="secure_view_step4_detail">
+        This button filters touches using a touch listener to examine the MotionEvent flags
+        and warns the user.  This button will display a message if touched while the
+        toast is visible.
+    </string>
+
+    <string name="secure_view_pop_toast">Pop toast</string>
+    <string name="secure_view_button">Don\'t click!  It\'ll cost you!</string>
+    <string name="secure_view_action_dialog_title">Oh no!</string>
+    <string name="secure_view_action_dialog_dismiss">Oops...</string>
+    <string name="secure_view_caught_dialog_title">Saved!</string>
+    <string name="secure_view_caught_dialog_message">
+        Careful!  There appears to be another window partly obscuring this window...
+        Something unutterably HORRIBLE might have happened.
+    </string>
+    <string name="secure_view_caught_dialog_dismiss">Phew!</string>
+
+    <string name="secure_view_overlay_description">A toast!  A toast!</string>
+    <string name="secure_view_overlay_button1">Totally safe, trust me...</string>
+    <string name="secure_view_overlay_button2">Clicky?</string>
+    <string name="secure_view_overlay_button3">Think of the penguins!</string>
 
     <!-- ============================== -->
     <!--  GoogleLogin examples strings  -->
@@ -722,7 +783,7 @@
     <string name="table_layout_3_open_shortcut">Ctrl-O</string>
     <string name="table_layout_3_save">Save As\u2026</string>
     <string name="table_layout_3_save_shortcut">(Save Document)</string>
-    <string name="table_layout_3_too_long">Too Long Sting</string>
+    <string name="table_layout_3_too_long">Too Long</string>
     <string name="table_layout_3_quit">Quit Application</string>
     <string name="table_layout_3_quit_shortcut">Ctrl-Shift-Q</string>
     <string name="table_layout_4_open">Open\u2026</string>

@@ -21,17 +21,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-  <ImageView android:id="@+id/icon"
+   <ImageView android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dip" />
     <TextView android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ffffffff" />   
-   <ImageView android:id="@+id/icon1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dip" />
-    
+        android:textColor="#ffffffff" />    
 </LinearLayout>

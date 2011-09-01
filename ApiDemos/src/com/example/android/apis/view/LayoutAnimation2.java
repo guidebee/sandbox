@@ -44,7 +44,7 @@ public class LayoutAnimation2 extends ListActivity {
             Animation.RELATIVE_TO_SELF, 0.0f,Animation.RELATIVE_TO_SELF, 0.0f,
             Animation.RELATIVE_TO_SELF, -1.0f,Animation.RELATIVE_TO_SELF, 0.0f
         );
-        animation.setDuration(2000);
+        animation.setDuration(100);
         set.addAnimation(animation);
 
         LayoutAnimationController controller = new LayoutAnimationController(set, 0.5f);

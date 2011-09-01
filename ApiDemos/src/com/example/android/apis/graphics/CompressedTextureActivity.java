@@ -48,7 +48,7 @@ public class CompressedTextureActivity extends Activity {
      * Choose between creating a compressed texture on the fly or
      * loading a compressed texture from a resource.
      */
-    private final static boolean TEST_CREATE_TEXTURE = true;
+    private final static boolean TEST_CREATE_TEXTURE = false;
     /**
      * When creating a compressed texture on the fly, choose
      * whether or not to use the i/o stream APIs.

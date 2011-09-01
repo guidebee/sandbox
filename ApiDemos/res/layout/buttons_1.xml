@@ -39,8 +39,6 @@
 
         <ToggleButton android:id="@+id/button_toggle"
             android:text="@string/buttons_1_toggle"
-            android:textOn="Open"
-            android:textOff="Close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
             

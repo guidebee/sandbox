@@ -79,8 +79,6 @@ public class SaveRestoreState extends Activity
 
         // Set message to be appropriate for this screen.
         ((TextView)findViewById(R.id.msg)).setText(R.string.save_restore_msg);
-        
-        
     }
 
     /**
@@ -96,8 +94,5 @@ public class SaveRestoreState extends Activity
     void setSavedText(CharSequence text) {
         ((EditText)findViewById(R.id.saved)).setText(text);
     }
-    
-
-   
 }
 

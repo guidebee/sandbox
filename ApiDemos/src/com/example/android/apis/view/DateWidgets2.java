@@ -19,8 +19,6 @@ package com.example.android.apis.view;
 import com.example.android.apis.R;
 
 import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.os.Bundle;
@@ -29,7 +27,6 @@ public class DateWidgets2 extends Activity {
 
     // where we display the selected date and time
     private TextView mTimeDisplay;
-    private TextView mDateDisplay;
 
 
     @Override
@@ -41,8 +38,9 @@ public class DateWidgets2 extends Activity {
         TimePicker timePicker = (TimePicker) findViewById(R.id.timePicker);
         timePicker.setCurrentHour(12);
         timePicker.setCurrentMinute(15);
- 
-        mTimeDisplay = (TextView) findViewById(R.id.timeDisplay);
+
+        mTimeDisplay = (TextView) findViewById(R.id.dateDisplay);
+
         updateDisplay(12, 15);
 
         timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
@@ -51,29 +49,8 @@ public class DateWidgets2 extends Activity {
                 updateDisplay(hourOfDay, minute);
             }
         });
-        
-        DatePicker datePicker = (DatePicker) findViewById(R.id.datePicker);
-       
-        mDateDisplay = (TextView) findViewById(R.id.dateDisplay);
-        DatePicker.OnDateChangedListener dateSetListener =
-            new DatePicker.OnDateChangedListener() {
-                public void onDateChanged(DatePicker view, 
-                		int year, int monthOfYear, int dayOfMonth) {
-                	updateDisplay(year, monthOfYear,dayOfMonth);
-                }
-            };
-       datePicker.init(2011, 6, 20, dateSetListener);
-       updateDisplay(2011, 6,20);
     }
 
-    private void updateDisplay(int year, int month,int day) {
-    	mDateDisplay.setText(
-                    new StringBuilder()
-                    .append(pad(year)).append("-")
-                    .append(pad(month+1)).append("-")
-                    .append(pad(day)));
-    }
-    
     private void updateDisplay(int hourOfDay, int minute) {
         mTimeDisplay.setText(
                     new StringBuilder()
